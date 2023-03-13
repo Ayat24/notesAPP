@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'custom_app_bar.dart';
 import 'custom_note_item.dart';
-import '';
+import 'notes_list_view.dart';
 
 class NotesViewBody extends StatelessWidget {
   const NotesViewBody({super.key});
@@ -26,14 +26,5 @@ class NotesViewBody extends StatelessWidget {
         ],
       ),
     );
-  }
-}
-
-class NotesListView extends StatelessWidget {
-  const NotesListView({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
   }
 }
