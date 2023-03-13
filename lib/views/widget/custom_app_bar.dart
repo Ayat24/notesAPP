@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'costum_icon.dart';
+
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({super.key});
 
@@ -13,10 +15,9 @@ class CustomAppBar extends StatelessWidget {
             fontSize: 28,
           ),
         ),
-        Spacer()
+        Spacer(),
         CustomSearchIcon()
       ],
     );
   }
 }
-
