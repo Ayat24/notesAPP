@@ -13,6 +13,8 @@ class CustomAppBar extends StatelessWidget {
             fontSize: 28,
           ),
         ),
+        Spacer()
+        CustomSearchIcon()
       ],
     );
   }
@@ -23,6 +25,16 @@ class CustomSearchIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return  Container(
+      height: 45,
+    width: 45,
+    decoration: BoxDecoration(
+      color: Colors.white
+    ),
+    child: Center(child: Icon(
+      Icons.search,
+    ),
+    ),
+    );
   }
 }
