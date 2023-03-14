@@ -1,5 +1,6 @@
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:noteapp/constants.dart';
 
 class CustomTextField extends StatelessWidget {
   const CustomTextField({super.key});
@@ -10,6 +11,7 @@ class CustomTextField extends StatelessWidget {
       decoration: InputDecoration(
         border: buildBorder(),
         enabledBorder: buildBorder(),
+        focusedBorder: buildBorder(kPrimaryColor),
       ),
     );
   }
