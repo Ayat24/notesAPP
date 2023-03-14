@@ -5,53 +5,65 @@ class NoteItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.only(left: 16, top: 24, bottom: 24),
-      decoration: BoxDecoration(
-        color: Color(note.color),
-        borderRadius: BorderRadius.circular(16),
-      ),
-      padding: const EdgeInsets.only(left: 16, top: 24, bottom: 24),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.end,
-        children: [
-          ListTile(
-            title: Text(
-              note.title,
-              style: const TextStyle(
-                fontSize: 26,
-                color: Colors.black,
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) {
+            return EditNoteView(
+              note: note,
+            );
+          }),
+        );
+      },
+      child: Container(
+        padding: const EdgeInsets.only(left: 16, top: 24, bottom: 24),
+        decoration: BoxDecoration(
+          color: Color(note.color),
+          borderRadius: BorderRadius.circular(16),
+        ),
+        padding: const EdgeInsets.only(left: 16, top: 24, bottom: 24),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: [
+            ListTile(
+              title: Text(
+                note.title,
+                style: const TextStyle(
+                  fontSize: 26,
+                  color: Colors.black,
+                ),
               ),
-            ),
-            subtitle: Padding(
-              padding: const EdgeInsets.symmetric(vertical: 16),
-              child: Text(
-                note.subTitle,
-                style: TextStyle(
-                  fontSize: 18,
-                  color: Colors.black.withOpacity(.4),
+              subtitle: Padding(
+                padding: const EdgeInsets.symmetric(vertical: 16),
+                child: Text(
+                  note.subTitle,
+                  style: TextStyle(
+                    fontSize: 18,
+                    color: Colors.black.withOpacity(.4),
+                  ),
+                ),
+              ),
+              trailing: IconButton(
+                onPressed: () {},
+                icon: const Icon(
+                  Icons.delete,
+                  color: Colors.black,
+                  size: 30,
                 ),
               ),
             ),
-            trailing: IconButton(
-              onPressed: () {},
-              icon: const Icon(
-                Icons.delete,
-                color: Colors.black,
-                size: 30,
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 24),
+              child: Text(
+                note.date,
+                style: TextStyle(
+                  color: Colors.black.withOpacity(.4),
+                ),
               ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 24),
-            child: Text(
-              note.date,
-              style: TextStyle(
-                color: Colors.black.withOpacity(.4),
-              ),
-            ),
-          )
-        ],
+            )
+          ],
+        ),
       ),
     );
   }
