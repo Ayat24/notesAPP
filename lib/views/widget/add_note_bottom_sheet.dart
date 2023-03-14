@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'custom_text_field.dart';
 
 class AddNoteBottomsheet extends StatelessWidget {
@@ -10,12 +9,20 @@ class AddNoteBottomsheet extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 16),
       child: Column(
-        children: [
-    
+        children: const [
           SizedBox(
             height: 32,
-          )
-          CustomTextField(),
+          ),
+          CustomTextField(
+            hint: 'title',
+          ),
+          SizedBox(
+            height: 16,
+          ),
+          CustomTextField(
+            hint: 'content',
+            maxLines: 5,
+          ),
         ],
       ),
     );
