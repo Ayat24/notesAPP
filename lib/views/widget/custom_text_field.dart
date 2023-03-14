@@ -6,6 +6,8 @@ class CustomTextField extends StatelessWidget {
   const CustomTextField({super.key});
 
   @override
+  final String hint;
+  final int maxLines;
   Widget build(BuildContext context) {
     return TextField(
       cursorColor: kPrimaryColor,
