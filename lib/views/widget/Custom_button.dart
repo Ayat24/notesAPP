@@ -14,6 +14,15 @@ class CustomButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(
             8,
           )),
+          child: Center(
+          child: isLoading
+              ? const SizedBox(
+                  height: 24,
+                  width: 24,
+                  child: CircularProgressIndicator(
+                    color: Colors.black,
+                  ),
+                ) 
     );
   }
 }
