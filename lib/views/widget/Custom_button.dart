@@ -5,6 +5,7 @@ class CustomButton extends StatelessWidget {
   const CustomButton({super.key});
 
   @override
+   final bool isLoading;
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width,
@@ -23,6 +24,6 @@ class CustomButton extends StatelessWidget {
                     color: Colors.black,
                   ),
                 ) 
-    );
+    ),);
   }
 }
