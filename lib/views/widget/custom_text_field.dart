@@ -3,7 +3,11 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:noteapp/constants.dart';
 
 class CustomTextField extends StatelessWidget {
-  const CustomTextField({super.key});
+  const CustomTextField({
+    super.key,
+    required this.hint,
+    this.maxLines = 1,
+  });
 
   @override
   final String hint;
