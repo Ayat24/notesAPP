@@ -18,6 +18,7 @@ class AddNoteBottomsheet extends StatelessWidget {
 
 class addNoteForm extends State<addNoteForm> {
   final GlobalKey<FormState> formKey = GlobalKey();
+  AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
 
   @override
   Widget build(BuildContext context) {
