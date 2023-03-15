@@ -42,7 +42,7 @@ class EditViewBody extends StatelessWidget {
             onChanged: (value) {
               content = value;
             },
-            hint: widget.note.subTitle,
+            hint: 'content',
             maxLines: 5,
           ),
           const SizedBox(
