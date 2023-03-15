@@ -3,6 +3,7 @@ import 'package:noteapp/views/notes_view.dart';
 
 void main() async {
   await Hive.initFlutter();
+  Hive.openBox();
   runApp(const NotesApp());
 }
 
