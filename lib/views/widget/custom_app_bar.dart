@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'costum_icon.dart';
 
 class CustomAppBar extends StatelessWidget {
-  const CustomAppBar({super.key});
+  const CustomAppBar(
+      {super.key, required this.title, required this.icon, this.onPressed});
 
   @override
   final String title;
@@ -19,8 +20,10 @@ class CustomAppBar extends StatelessWidget {
             fontSize: 28,
           ),
         ),
-        Spacer(),
-        CustomSearchIcon()
+        CustomIcon(
+          onPressed: onPressed,
+          icon: icon,
+        ),
       ],
     );
   }
