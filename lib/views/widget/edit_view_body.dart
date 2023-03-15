@@ -7,20 +7,24 @@ class EditViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-     return Padding(
+    return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 24),
       child: Column(
         children: [
           const SizedBox(
             height: 50,
           ),
-         CustomAppBar(
+          CustomAppBar(
             onPressed: () {
               widget.note.title = title ?? widget.note.title;
               widget.note.subTitle = content ?? widget.note.subTitle;
               widget.note.save();
               BlocProvider.of<NotesCubit>(context).fetchAllNotes();
               Navigator.pop(context);
-            }, 
+            },
+          )
+        ],
+      ),
+    );
   }
 }
