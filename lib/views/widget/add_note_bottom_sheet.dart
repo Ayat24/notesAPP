@@ -22,6 +22,8 @@ class addNoteForm extends State<addNoteForm> {
   String? title, subTitle;
   @override
   Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onTap,
     child:
     Column(
       children: [
@@ -47,7 +49,7 @@ class addNoteForm extends State<addNoteForm> {
         const SizedBox(
           height: 32,
         ),
-        const ColorsListView(),
+        const CustomButton(),
         const SizedBox(
           height: 32,
         ),
