@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:noteapp/views/notes_view.dart';
 
-void main() {
+void main() async {
   runApp(const NotesApp());
 }
 
