@@ -47,7 +47,7 @@ class addNoteForm extends State<addNoteForm> {
           maxLines: 5,
         ),
         const SizedBox(
-          height: 32,
+          height: 16,
         ),
          CustomButton(
 if (formKey.currentState!.validate()) {
