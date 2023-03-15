@@ -12,6 +12,8 @@ class CustomTextField extends StatelessWidget {
   @override
   final String hint;
   final int maxLines;
+  final void Function(String?)? onSaved;
+
   Widget build(BuildContext context) {
     return TextField(
       cursorColor: kPrimaryColor,
