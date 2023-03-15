@@ -22,7 +22,9 @@ class EditViewBody extends StatelessWidget {
               BlocProvider.of<NotesCubit>(context).fetchAllNotes();
               Navigator.pop(context);
             },
-          )
+            title: 'Edit Note',
+            icon: Icons.check,
+          ),
         ],
       ),
     );
