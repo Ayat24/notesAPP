@@ -4,6 +4,7 @@ class CustomSearchIcon extends StatelessWidget {
   const CustomSearchIcon({super.key});
 
   @override
+  final IconData icon;
   Widget build(BuildContext context) {
     return Container(
       height: 46,
