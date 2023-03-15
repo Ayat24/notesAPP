@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:noteapp/views/notes_view.dart';
 import 'constants.dart';
 
+import 'cubits/notes_cubit/notes_cubit.dart';
+
 void main() async {
   await Hive.initFlutter();
 

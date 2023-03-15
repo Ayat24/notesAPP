@@ -59,9 +59,10 @@ if (formKey.currentState!.validate()) {
                   }
         ),
         const SizedBox(
-          height: 32,
-        ),
-      ],
+            height: 16,
+          ),
+        ],
+      ),
     );
   }
 }
