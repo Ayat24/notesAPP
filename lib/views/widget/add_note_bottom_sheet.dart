@@ -22,27 +22,34 @@ class addNoteForm extends State<addNoteForm> {
   String? title, subTitle;
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: const [
-        SizedBox(
+    child:
+    Column(
+      children: [
+        const SizedBox(
           height: 32,
         ),
         CustomTextField(
+          onSaved: (value) {
+            title = value;
+          },
           hint: 'title',
         ),
-        SizedBox(
+        const SizedBox(
           height: 16,
         ),
         CustomTextField(
+          onSaved: (value) {
+            subTitle = value;
+          },
           hint: 'content',
           maxLines: 5,
         ),
-        SizedBox(
+        const SizedBox(
           height: 32,
         ),
-        CustomButton(),
-        SizedBox(
-          height: 16,
+        const ColorsListView(),
+        const SizedBox(
+          height: 32,
         ),
       ],
     );
