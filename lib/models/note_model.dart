@@ -1,5 +1,7 @@
+import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 
+@HiveType(typeId: 0)
 class NoteModel extends HiveObject {
   @HiveField(0)
   String title;
