@@ -16,10 +16,8 @@ class AddNoteBottomsheet extends StatelessWidget {
   }
 }
 
-class addNoteForm extends StatelessWidget {
-  const addNoteForm({
-    super.key,
-  });
+class addNoteForm extends State<addNoteForm> {
+  final GlobalKey<FormState> formKey = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
