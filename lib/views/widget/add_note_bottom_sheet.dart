@@ -49,7 +49,11 @@ class addNoteForm extends State<addNoteForm> {
         const SizedBox(
           height: 32,
         ),
-        const CustomButton(),
+         CustomButton(
+if (formKey.currentState!.validate()) {
+                    formKey.currentState!.save();}
+                    
+        ),
         const SizedBox(
           height: 32,
         ),
